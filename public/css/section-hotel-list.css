@@ -5,23 +5,24 @@ section#hotel_list {
   section#hotel_list .content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   section#hotel_list .content table{
+    max-width: 1400px;
     width: 100%;
   }
   
   section#hotel_list .content th{
     height: 50px;
-    font-size: 45px;
+    font-size: 100%;
     border: 4px solid rgb(90, 8, 45);
     text-align: center; 
   }
 
   section#hotel_list .content td{
     height: 40px;
-    font-size: 35px;
+    font-size: 100%;
     border: 4px solid rgb(90, 8, 45);
     text-align: center; 
   }

@@ -8,26 +8,39 @@ section#promotions {
   section#promotions .content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
+    width: 100%;
   }
   
-  section#promotions .content .container button {
-    height: 40px;
-    width: 90px;
+  section#promotions .content img {
+    width: 40%;
+    max-height: 175px;
+    object-fit: contain
+  }
+
+  section#promotions .content .formu{
+    width: 50%;
+  }
+
+  section#promotions .content .formu button {
+    font-size: large;
+    height: 50px;
+    width: 100px;
     background: #fff;
     color: #000;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 35px;
     border: 0;
     border-radius: 8px;
   }
 
-  section#promotions .content .container button:hover {
+  section#promotions .content .formu button:hover {
     background: #aaa;
   }
 
-  section#promotions .content .container input[type=text] {
+  section#promotions .content .formu input[type=text] {
+    height: 50px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -37,7 +50,8 @@ section#promotions {
     box-sizing: border-box;
   }
 
-  section#promotions .content .container input[type=date] {
+  section#promotions .content .formu input[type=date] {
+    height: 50px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -45,4 +59,10 @@ section#promotions {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 600px) {
+    .plane {
+      display: none;
+    }
   }

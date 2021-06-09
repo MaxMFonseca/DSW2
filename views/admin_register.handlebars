@@ -1,34 +1,10 @@
 <section id="admin_register">
     <div class="content">
-        <form action="/" method="POST">
-            <table style="width:100%">
-                <th>
-                    <p> Tipo </p>
-                    <select name="tipe">
-                        <option value="hotel">Hotel</option>
-                        <option value="site">Site</option>
-                    </select>
-                </th>
-                <th>
-                    <p> Nome: </p>
-                    <input type="text" name="name">
-                </th>
-                <th>
-                    <p> Password: </p>
-                    <input type="password" name="password">
-                </th>
-                <th>
-                    <p> CNPJ/URL: </p>
-                    <input type="text" name="cnpjurl">
-                </th>
-                <th>
-                    <p> Cidade/Telefone: </p>
-                    <input type="text" name="cityno">
-                </th>
-                <th>
-                    <button type="submit">Register</button>
-                </th>
-            </table>          
-        </form>
+        <script src="script/admin_register.js" defer></script>  
+        <div class="shselect">
+            <h2>Qual você deseja adicionar?</h2>
+            <button id="addHotelBtn">Hotel</button>
+            <button id="addSiteBtn">Site</button>
+        </div>
     </div>
 </section>

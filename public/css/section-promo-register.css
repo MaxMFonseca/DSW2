@@ -10,13 +10,15 @@ section#promo_register .content{
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 section#promo_register .content button {
-  height: 40px;
+  height: 50px;
   width: 90px;
   background: #fff;
   color: #000;
+  margin-top: 35px;
   margin-left: 60px;
   border: 0;
   border-radius: 8px;
@@ -27,6 +29,7 @@ section#promo_register .content button:hover {
 }
 
 section#promo_register .content input[type=text] {
+  height: 50px;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -37,6 +40,7 @@ section#promo_register .content input[type=text] {
 }
 
 section#promo_register .content input[type=date] {
+  height: 50px;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

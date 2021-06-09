@@ -1,18 +1,62 @@
 <section id="introduction">
 	<div class="content"> 
-		<img src="images/globo.png">
+		<img class="globo636" src="images/globo636.png">
+		<img class="globo400" src="images/globo400.png">
+		<img class="globo200" src="images/globo200.png">
 		<div class="container">
-			<h2>Viage para todo o MUNDO com Tricheio!!!</h2>
-			<h3>Dubai, Disney, Paris, Sidney, Lisboa e muito mais!</h3>
-			<h4>A plataforma esta cheia de novas oportidades para você</h4> 
+			<h1>Viage para todo o MUNDO com Tricheio!!!</h1>
+			<h2>Dubai, Disney, Paris, Sidney, Lisboa e muito mais!</h2>
+			<h3>A plataforma esta cheia de novas oportidades para você</h3> 
 		</div>
 	</div>
 </section>
 
+{{#if (streq usertype "hotel")}}
+<section id="hotel_base">
+	<div class="content">
+		<div>
+			<h2>Boas vindas HOTEL!</h2>
+			<h3>Deseja cadastrar uma nova promoção?</h3>
+		</div>
+		<form action="/promo_register" method="POST">
+            <button type="submit">Registrar nova promoção</button>
+        </form>
+    </div>
+</section>
+{{/if}}
+
+{{#if (streq usertype "site")}}
+<section id="site_base">
+	<div class="content">
+		<div>
+			<h2>Boas vindas SITE!</h2>
+			<h3>Deseja cadastrar uma nova promoção?</h3>
+		</div>
+        <form action="/promo_register" method="POST">
+            <button type="submit">Registrar nova promoção</button>
+        </form>
+    </div>
+</section>
+{{/if}}
+
+{{#if (streq usertype "admin")}}
+<section id="admin_base">
+	<div class="content">
+		<div>
+			<h2>Boas vindas ADMIN!</h2>
+			<h3>Deseja cadastrar um novo SITE/HOTEL?</h3>
+		</div>
+		<form action="/admin_register" method="POST">
+            <button type="submit">Registrar novo site/hotel</button>
+        </form>
+    </div>
+</section>
+{{/if}}
+
 <section id="promotions">
 	<div class="content">
-		<div class="container">
-			<h2>Escolha a sua rota:</h2>
+		<div class="formu">
+			<h2>Escolha a rota e datas:</h2>
 			<form action="/list" method="POST">
 				<table style="width:100%">
 					<th>
@@ -25,13 +69,12 @@
 						<p> Volta: </p>
 						<input type="date" name="return_date"> </th>
 					<th>
-						<button type="submit">IR </button>
+						<button type="submit">IR</button>
 					</th>
 				</table>
 			</form>
 		</div> 
         
-        <img src="images/plane.png"> 
+        <img class="plane" src="images/plane.png"> 
     </div>
 </section>
-

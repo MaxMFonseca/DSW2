@@ -1,0 +1,29 @@
+section#hotel_base {
+    height: 200px;
+    width: 100%;
+    color: #fff;
+    background: rgb(90, 8, 45)
+  }
+  
+  section#hotel_base .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  section#hotel_base .content button {
+    height: 60px;
+    width: 150px;
+    background: #fff;
+    color: #000;
+    margin-left: 60px;
+    border-width: 5px;
+    border-color: #000;
+    border-radius: 12px;
+    font-size: large;
+  }
+
+  section#hotel_base .content button:hover {
+    background: #aaa;
+  }

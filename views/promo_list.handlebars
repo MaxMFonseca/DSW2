@@ -1,0 +1,58 @@
+<section id="hotel_list">
+    <div class="content">
+        <table>
+            <tr>
+                <th>Nome do hotel</th>
+                <th>Nome do site</th>
+                <th>Dia do Check In</th>
+                <th>Dia do Check Out</th>
+                <th>Preço</th>
+                {{#if (streq usertype "buyer")}}
+                <th>Comprar??????</th>
+                {{/if}}
+                {{#if (streq usertype "site")}}
+                <th>Editar</th>
+                {{/if}}
+                {{#if (streq usertype "hotel")}}
+                <th>Editar</th>
+                {{/if}}
+            </tr>
+            {{#each promos}}
+            <tr>
+                <td>{{hotel}}</td>
+                <td>{{site}}</td>
+                <td>{{in}}</td>
+                <td>{{out}}</td>
+                <td>{{price}}</td>
+                {{#if (streq ../usertype "buyer")}}
+                <td>Comprar</td>
+                {{/if}}
+                {{#if (streq ../usertype "site")}}
+                <td>
+                    <form action="/promo_register" method="POST">
+                        <button type="submit">Editar</button>
+                    </form>
+                </td>
+                {{/if}}
+                {{#if (streq ../usertype "hotel")}}
+                <td>
+                    <form action="/promo_register" method="POST">
+                        <button type="submit">Editar</button>
+                    </form>
+                </td>
+                {{/if}}
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</section>
+
+{{#ifCond (streq usertype "site") "||" (streq usertype "hotel")}}
+<section id = "hotel_list_placeholder_admin_button">
+    <div>
+        <form action="/promo_register" method="POST">
+            <button type="submit">Registrar nova promoção</button>
+        </form>
+    </div>
+</section>
+{{/ifCond}}

@@ -1,22 +1,22 @@
 section#admin_register {
     height: 200px;
     width: 100%;
-    color: #fff;
-    background: rgb(90, 8, 45, 0.8);
+    background: rgb(90, 8, 45, 0.5);
   }
   
   section#admin_register .content{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-around; 
     height: 100%;
   }
   
   section#admin_register .content button {
-    height: 40px;
-    width: 90px;
+    height: 50px;
+    width: 100px;
     background: #fff;
     color: #000;
+    margin-top: 35px;
     margin-left: 30px;
     border: 0;
     border-radius: 8px;
@@ -27,6 +27,7 @@ section#admin_register {
   }
   
   section#admin_register .content input[type=text] {
+    height: 50px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -37,6 +38,7 @@ section#admin_register {
   }
   
   section#admin_register .content input[type=password] {
+    height: 50px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -46,7 +48,8 @@ section#admin_register {
     box-sizing: border-box;
   }
 
-  section#admin_register .content input[type=select] {
+  section#admin_register .content select {
+    height: 50px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
