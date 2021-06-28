@@ -1,0 +1,13 @@
+@import url('global.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('section-introduction.css');
+@import url('section-promotions.css');
+@import url('section-hotel-list.css');
+@import url('section-promo-register.css');
+@import url('section-admin-register.css');
+@import url('section-admin-base.css');
+@import url('section-hotel-base.css');
+@import url('section-site-base.css');
+@import url('fof.css');
+@import url('bootstrap/bootstrap.min.css');

@@ -1,0 +1,64 @@
+header#header {
+  height: 100px;
+  width: 100%;
+  color: #ffffff;
+  background: rgb(90, 8, 45);
+}
+
+header#header .content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+header#header .content #loginDiv {
+  align-items: center;
+  height: 100%;
+}
+
+header#header .content #loginDiv #loginBtn, #logoutBtn {
+  height: 40px;
+  width: 90px;
+  background: #ffffff;
+  color: #000000;
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 0;
+  border-radius: 8px;
+}
+
+header#header .content #loginDiv #sLoginBtn {
+  height: 40px;
+  width: 90px;
+  background: #ffffff;
+  color: #000000;
+  margin-left: 30px;
+  margin-top: 46px;
+  border: 0;
+  border-radius: 8px;
+}
+
+header#header .content #loginDiv button:hover {
+  background: #aaaaaa;
+}
+
+header#header .content #loginDiv input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+header#header .content #loginDiv input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,62 @@
+section#hotel_list {
+    padding: 60px 0;
+  }
+  
+  section#hotel_list .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  section#hotel_list .content table{
+    max-width: 1400px;
+    width: 100%;
+  }
+  
+  section#hotel_list .content th{
+    height: 50px;
+    font-size: 100%;
+    border: 4px solid rgb(90, 8, 45);
+    text-align: center; 
+  }
+
+  section#hotel_list .content td{
+    height: 40px;
+    font-size: 100%;
+    border: 4px solid rgb(90, 8, 45);
+    text-align: center; 
+  }
+
+  section#hotel_list .content button {
+    height: 40px;
+    width: 180px;
+    background: #aaa;
+    color: #000;
+    border: 0;
+    border-radius: 8px;
+  }
+
+  section#hotel_list .content button:hover {
+    background: #aaa;
+  }
+
+
+  section#hotel_list_placeholder_admin_button {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#hotel_list_placeholder_admin_button button {
+    height: 40px;
+    width: 180px;
+    background: #aaa;
+    color: #000;
+    border: 0;
+    border-radius: 8px;
+  }
+
+  section#hotel_list_placeholder_admin_button button:hover {
+    background: #aaa;
+  }

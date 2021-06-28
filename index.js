@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const handlebars = require('express-handlebars')
 const path = require('path');
 /*MONGO??*/
 
@@ -9,15 +8,8 @@ let loginStatus = {
     usertype: "none"
 }
 
-app.engine('handlebars', handlebars({
-    defaultLayout:'main'
-}))
-
-app.set('viewEngine', 'handlebars')
-
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
-app.use(express.static(path.join(__dirname, '/public')));
 
 const promos = [
         {
@@ -66,7 +58,7 @@ const promos = [
 
 app.get('/', function(req, res){
     let data = loginStatus
-    res.render('base.handlebars', data)
+    res.render('./client/src/index.js', data)
 })
 
 app.post('/', function(req, res){
@@ -98,11 +90,6 @@ app.get('/home', function(req, res){
     res.render('base.handlebars', data)
 })
 
-app.get('/loginPage', function(req, res){
-    let data = loginStatus
-    res.render('login_page.handlebars', data)
-})
-
 app.post('/list', function(req, res){
     let data = loginStatus
     data.promos = promos
@@ -124,39 +111,6 @@ app.use(function (req, res, next) {
     res.status(404).render('fof.handlebars', data)
   });
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log('running')
+app.listen(process.env.PORT || 3001, function(){
+    console.log('running 3001')
 })
-
-var hbs = handlebars.create({});
-hbs.handlebars.registerHelper('streq', function (valuea , valueb) {
-    return valuea === valueb;
-  });
-
-hbs.handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
-
-    switch (operator) {
-        case '==':
-            return (v1 == v2) ? options.fn(this) : options.inverse(this);
-        case '===':
-            return (v1 === v2) ? options.fn(this) : options.inverse(this);
-        case '!=':
-            return (v1 != v2) ? options.fn(this) : options.inverse(this);
-        case '!==':
-            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
-        case '<':
-            return (v1 < v2) ? options.fn(this) : options.inverse(this);
-        case '<=':
-            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-        case '>':
-            return (v1 > v2) ? options.fn(this) : options.inverse(this);
-        case '>=':
-            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-        case '&&':
-            return (v1 && v2) ? options.fn(this) : options.inverse(this);
-        case '||':
-            return (v1 || v2) ? options.fn(this) : options.inverse(this);
-        default:
-            return options.inverse(this);
-    }
-});
